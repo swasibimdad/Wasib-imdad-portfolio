@@ -15,6 +15,6 @@
 .portfolio-row:last-child{border-bottom:0}
 .portfolio-row h2{margin:0 0 14px;font-family:'Plus Jakarta Sans',Inter,sans-serif;font-size:clamp(1.15rem,2.25vw,2.45rem);font-weight:700;line-height:1.15;letter-spacing:-.025em}
 .portfolio-row p{margin:0;font-size:clamp(.76rem,1vw,1.02rem);font-weight:400;font-style:italic;line-height:1.45;color:#f1eeee}
-.portfolio-row:hover,.portfolio-row:focus-visible{background:#484344;padding-left:20px}
+.portfolio-row:hover,.portfolio-row:focus-visible{background:#E65B4F}
 .portfolio-row:focus-visible{outline:2px solid #f15045;outline-offset:-2px}
 @media(max-width:600px){.portfolio-intro{padding:22px 11px 28px}.portfolio-intro h1{font-size:2.75rem}.portfolio-row{min-height:104px;padding:23px 11px}.portfolio-row h2{font-size:1.12rem;margin-bottom:13px}.portfolio-row p{font-size:.72rem}}
