@@ -4,5 +4,38 @@ let wordTimer;
 render=function(){clearInterval(wordTimer);originalRender();const isHome=location.pathname==='/' ;document.body.classList.toggle('is-original-home',isHome);if(isHome){document.querySelector('.video-cover').onclick=()=>{document.querySelector('.original-player').innerHTML='<iframe src="https://www.youtube.com/embed/gCq7XP2yFVA?autoplay=1&rel=0" title="Wasib Imdad — introduction film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';};if(!matchMedia('(prefers-reduced-motion: reduce)').matches){let i=0;wordTimer=setInterval(()=>{const el=document.querySelector('#creating-word');if(el)el.textContent=['Brands','Stories','Narratives'][++i%3]},3000)}}};
 addEventListener('popstate',()=>render());render();
 const homeBeforeHover=home;
+let stopHomeMotion=()=>{};
+const renderBeforeMotion=render;
+render=function(){
+  stopHomeMotion();
+  renderBeforeMotion();
+  const section=document.querySelector('.original-video');
+  const player=document.querySelector('.original-player');
+  if(!section||!player)return;
+  const tablet=document.createElement('div');
+  tablet.className='intro-tablet';
+  player.before(tablet);
+  tablet.append(player);
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  let frame=0;
+  const update=()=>{
+    frame=0;
+    const rect=section.getBoundingClientRect();
+    const progress=Math.max(0,Math.min(1,(innerHeight-rect.top)/(innerHeight*.72)));
+    const remaining=reduced.matches?0:1-progress;
+    tablet.style.transform='translate3d('+remaining*12+'%, '+remaining*150+'px, 0) rotate('+remaining*9+'deg) scale('+(1-remaining*.14)+')';
+  };
+  const queue=()=>{if(!frame)frame=requestAnimationFrame(update)};
+  addEventListener('scroll',queue,{passive:true});
+  addEventListener('resize',queue);
+  reduced.addEventListener('change',queue);
+  update();
+  stopHomeMotion=()=>{
+    cancelAnimationFrame(frame);
+    removeEventListener('scroll',queue);
+    removeEventListener('resize',queue);
+    reduced.removeEventListener('change',queue);
+  };
+};
 home=function(){return homeBeforeHover().replace('<h1>Creative<br>Maker<br>Storyteller</h1>','<h1><span class="hero-word hero-word-creative">Creative</span><br><span class="hero-word hero-word-maker">Maker</span><br><span class="hero-word hero-word-storyteller">Storyteller</span></h1>');};
 render();
