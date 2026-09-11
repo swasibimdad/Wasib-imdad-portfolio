@@ -19,3 +19,15 @@
 .portfolio-row:hover,.portfolio-row:focus-visible{background:#E65B4F}
 .portfolio-row:focus-visible{outline:2px solid #f15045;outline-offset:-2px}
 @media(max-width:600px){.portfolio-intro{padding:40px 24px 52px}.portfolio-intro h1{font-size:3.75rem;margin-bottom:24px}.portfolio-row{min-height:220px;padding:40px 24px}.portfolio-row h2{font-size:1.75rem;margin-bottom:18px}.portfolio-row p{font-size:1rem}}
+
+/* Harsukh flagship film: full-width, uncropped 16:9 player. */
+.harsukh-hero{display:block;min-height:0}
+.harsukh-hero .project-title{min-height:0;padding:clamp(48px,7vw,100px) var(--pad)}
+.harsukh-film{padding:clamp(20px,3.125vw,60px);background:#111}
+.harsukh-film iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;background:#000}
+
+.harsukh-video-cover{display:block;position:relative;width:100%;aspect-ratio:16/9;padding:0;border:0;background:#000;cursor:pointer}
+.harsukh-video-cover img{width:100%;height:100%;object-fit:contain}
+.harsukh-video-cover span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:90px;height:64px;border-radius:14px;background:#202020dd;color:#fff;font-size:32px;transition:background .2s}
+.harsukh-video-cover:hover span{background:#f00}
+.harsukh-video-cover:focus-visible{outline:3px solid #E65B4F;outline-offset:4px}
