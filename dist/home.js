@@ -3,3 +3,6 @@ const originalRender=render;
 let wordTimer;
 render=function(){clearInterval(wordTimer);originalRender();const isHome=location.pathname==='/' ;document.body.classList.toggle('is-original-home',isHome);if(isHome){document.querySelector('.video-cover').onclick=()=>{document.querySelector('.original-player').innerHTML='<iframe src="https://www.youtube.com/embed/gCq7XP2yFVA?autoplay=1&rel=0" title="Wasib Imdad — introduction film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';};if(!matchMedia('(prefers-reduced-motion: reduce)').matches){let i=0;wordTimer=setInterval(()=>{const el=document.querySelector('#creating-word');if(el)el.textContent=['Brands','Stories','Narratives'][++i%3]},3000)}}};
 addEventListener('popstate',()=>render());render();
+const homeBeforeHover=home;
+home=function(){return homeBeforeHover().replace('<h1>Creative<br>Maker<br>Storyteller</h1>','<h1><span class="hero-word hero-word-creative">Creative</span><br><span class="hero-word hero-word-maker">Maker</span><br><span class="hero-word hero-word-storyteller">Storyteller</span></h1>');};
+render();
