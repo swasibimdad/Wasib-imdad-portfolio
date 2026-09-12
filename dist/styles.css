@@ -23,9 +23,9 @@
 /* Harsukh flagship film: full-width, uncropped 16:9 player. */
 .harsukh-hero{display:block;min-height:0}
 .harsukh-hero .project-title{min-height:clamp(560px,72vh,850px);padding:clamp(48px,7vw,100px) var(--pad);position:relative;isolation:isolate;overflow:hidden;background:#34352d}
-.harsukh-hero .project-title:before{content:'';position:absolute;z-index:-2;inset:-18px;background:url('/assets/harsukh-hero-background.png') center 48%/cover no-repeat;filter:blur(2px);transform:scale(1.035);transition:transform 900ms cubic-bezier(.2,.65,.3,1),filter 500ms ease}
-.harsukh-hero .project-title:after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(10,12,14,.77) 0%,rgba(15,17,19,.58) 54%,rgba(15,17,19,.4) 100%)}
-.harsukh-hero .project-title:hover:before{transform:scale(1.075);filter:blur(1.5px)}
+.harsukh-hero .project-title:before{content:'';position:absolute;z-index:-2;inset:0;background:#000 url('/assets/harsukh-hero-background.jpg') center/cover no-repeat;transform:scale(1.002);transition:transform 1100ms cubic-bezier(.2,.65,.3,1)}
+.harsukh-hero .project-title:after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(4,5,6,.82) 0%,rgba(7,8,9,.55) 48%,rgba(7,8,9,.22) 100%)}
+.harsukh-hero .project-title:hover:before{transform:scale(1.035)}
 .harsukh-hero .project-title h1{max-width:10ch;text-shadow:0 2px 30px rgba(0,0,0,.2)}
 .harsukh-hero .project-title>p{max-width:34ch}
 .harsukh-film{padding:clamp(20px,3.125vw,60px);background:#111}
