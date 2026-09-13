@@ -23,8 +23,6 @@ render=function(){
     img.alt='';img.setAttribute('aria-hidden','true');img.draggable=false;
     section.append(img);return img;
   });
-  const note=document.createElement('p');
-  note.className='tools-note';note.textContent='made to make';section.append(note);
   const headphones=props[0];
   headphones.removeAttribute('aria-hidden');headphones.alt='Draggable headphones';
   headphones.tabIndex=0;headphones.setAttribute('aria-label','Move headphones: drag or use arrow keys');
@@ -54,22 +52,26 @@ render=function(){
     if(!delta)return;e.preventDefault();detach();move(parseFloat(headphones.style.left)+delta[0],parseFloat(headphones.style.top)+delta[1]);
   };
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let frame=0;
+  let frame=0,smoothed=null;
   const update=()=>{
     frame=0;
     const rect=section.getBoundingClientRect();
-    const progress=Math.max(0,Math.min(1,(innerHeight-rect.top)/(innerHeight*.72)));
+    const target=Math.max(0,Math.min(1,(innerHeight-rect.top)/(innerHeight+Math.min(rect.height*.35,350))));
+    if(smoothed===null||reduced.matches)smoothed=target;
+    smoothed+=(target-smoothed)*.075;
+    const progress=smoothed;
     const remaining=reduced.matches?0:1-progress;
     tablet.style.transform='translate3d('+remaining*12+'%, '+remaining*150+'px, 0) rotate('+remaining*9+'deg) scale('+(1-remaining*.14)+')';
     props.forEach((prop,i)=>{
       if(i===0&&detached)return;
       const p=reduced.matches?1:Math.max(0,Math.min(1,(progress-i*.08)/(.9-i*.08)));
       const r=1-p;
-      const x=[-110,65,90][i]*r;
-      const y=[-80,-160,180][i]*r;
+      const x=[-16,8,12][i]*r;
+      const y=[25,35,40][i]*r;
       prop.style.transform='translate3d('+x+'%, '+y+'%, 0) rotate('+([-14,-5,12][i]+r*[18,12,-18][i])+'deg)';
       prop.style.opacity=String(Math.min(1,p*4));
     });
+    if(Math.abs(target-smoothed)>.0005)frame=requestAnimationFrame(update);
   };
   const queue=()=>{if(!frame)frame=requestAnimationFrame(update)};
   addEventListener('scroll',queue,{passive:true});
