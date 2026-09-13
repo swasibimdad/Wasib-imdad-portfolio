@@ -23,6 +23,36 @@ render=function(){
     img.alt='';img.setAttribute('aria-hidden','true');img.draggable=false;
     section.append(img);return img;
   });
+  const note=document.createElement('p');
+  note.className='tools-note';note.textContent='made to make';section.append(note);
+  const headphones=props[0];
+  headphones.removeAttribute('aria-hidden');headphones.alt='Draggable headphones';
+  headphones.tabIndex=0;headphones.setAttribute('aria-label','Move headphones: drag or use arrow keys');
+  const canvas=section.closest('.framer-home');
+  let detached=false,drag=null;
+  const detach=()=>{
+    if(detached)return;
+    const rect=headphones.getBoundingClientRect(),base=canvas.getBoundingClientRect();
+    detached=true;
+    Object.assign(headphones.style,{left:(rect.left-base.left)+'px',top:(rect.top-base.top)+'px',width:rect.width+'px',transform:'none',opacity:'1',zIndex:'30'});
+    canvas.append(headphones);
+  };
+  const move=(x,y)=>{
+    headphones.style.left=Math.max(0,Math.min(canvas.clientWidth-headphones.offsetWidth,x))+'px';
+    headphones.style.top=Math.max(0,Math.min(canvas.offsetHeight-headphones.offsetHeight,y))+'px';
+  };
+  headphones.onpointerdown=e=>{
+    if(e.button!==0)return;
+    detach();drag={id:e.pointerId,x:e.pageX,y:e.pageY,left:parseFloat(headphones.style.left),top:parseFloat(headphones.style.top)};
+    headphones.setPointerCapture(e.pointerId);headphones.classList.add('is-dragging');e.preventDefault();
+  };
+  headphones.onpointermove=e=>{if(drag&&drag.id===e.pointerId)move(drag.left+e.pageX-drag.x,drag.top+e.pageY-drag.y)};
+  const release=()=>{drag=null;headphones.classList.remove('is-dragging')};
+  headphones.onpointerup=release;headphones.onpointercancel=release;headphones.onlostpointercapture=release;
+  headphones.onkeydown=e=>{
+    const delta={ArrowLeft:[-20,0],ArrowRight:[20,0],ArrowUp:[0,-20],ArrowDown:[0,20]}[e.key];
+    if(!delta)return;e.preventDefault();detach();move(parseFloat(headphones.style.left)+delta[0],parseFloat(headphones.style.top)+delta[1]);
+  };
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let frame=0;
   const update=()=>{
@@ -32,6 +62,7 @@ render=function(){
     const remaining=reduced.matches?0:1-progress;
     tablet.style.transform='translate3d('+remaining*12+'%, '+remaining*150+'px, 0) rotate('+remaining*9+'deg) scale('+(1-remaining*.14)+')';
     props.forEach((prop,i)=>{
+      if(i===0&&detached)return;
       const p=reduced.matches?1:Math.max(0,Math.min(1,(progress-i*.08)/(.9-i*.08)));
       const r=1-p;
       const x=[-110,65,90][i]*r;

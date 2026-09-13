@@ -3,10 +3,10 @@
 .original-hero .hero-word-creative:hover{color:#A5A886}
 .original-hero .hero-word-maker:hover{color:#E65B4F}
 .original-hero .hero-word-storyteller:hover{color:#F2B705}
-.framer-home{isolation:isolate}
+.framer-home{isolation:isolate;position:relative}
 .framer-home .original-hero{position:sticky;top:0;z-index:0}
 .framer-home .original-about,.framer-home .original-video,.framer-home .original-footer{position:relative;z-index:1}
-.framer-home .original-about{box-shadow:0 -16px 35px #00000010}
+.framer-home .original-about{box-shadow:0 -16px 35px #00000010;border-bottom:0}
 .framer-home .original-video{overflow:clip;perspective:1200px}
 .intro-tablet{position:relative;width:100%;padding:clamp(10px,1.65cqw,26px);background:#111214;border:2px solid #a9abad;border-radius:clamp(20px,3.2cqw,48px);box-shadow:0 24px 40px #00000040,inset 0 0 0 3px #292a2c;transform-origin:50% 65%;will-change:transform}
 .intro-tablet:before{content:'';position:absolute;left:50%;top:clamp(4px,.6cqw,9px);width:5px;height:5px;border-radius:50%;background:#252d3b;box-shadow:0 0 0 2px #090a0b}
@@ -16,6 +16,11 @@
 .intro-tablet{z-index:2}
 .desk-prop{position:absolute;height:auto;object-fit:contain;pointer-events:none;user-select:none;will-change:transform,opacity;filter:drop-shadow(0 14px 12px #0005)}
 .desk-headphones{left:37%;top:2%;width:23%;z-index:3}
+.desk-headphones{pointer-events:auto;cursor:grab;touch-action:none}
+.desk-headphones.is-dragging{cursor:grabbing}
+.desk-headphones:focus-visible{outline:2px dashed #f7f2f2;outline-offset:6px}
+.tools-note{position:absolute;left:8%;top:3%;z-index:4;margin:0;font-family:'Chalkboard SE','Bradley Hand',cursive;font-size:clamp(20px,2.5cqw,42px);font-weight:700;letter-spacing:.04em;transform:rotate(-6deg);color:#171914;pointer-events:none}
+.tools-note:after{content:'↘';display:block;text-align:right;font-size:1.7em;line-height:1;margin-right:12%}
 .desk-keyboard{right:-5%;top:0;width:43%;z-index:3}
 .desk-diary{right:-7%;bottom:-8%;width:25%;z-index:3}
 @media(max-width:600px){.framer-home .original-video{height:76cqw;min-height:300px;padding-top:14cqw;padding-bottom:14cqw}.desk-headphones{left:38%;width:24%}.desk-keyboard{width:45%;top:4%}.desk-diary{width:28%;bottom:0}}
