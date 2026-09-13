@@ -16,6 +16,13 @@ render=function(){
   tablet.className='intro-tablet';
   player.before(tablet);
   tablet.append(player);
+  const props=['headphones','keyboard','diary'].map(name=>{
+    const img=document.createElement('img');
+    img.className='desk-prop desk-'+name;
+    img.src='/assets/desk-'+name+'.png';
+    img.alt='';img.setAttribute('aria-hidden','true');img.draggable=false;
+    section.append(img);return img;
+  });
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let frame=0;
   const update=()=>{
@@ -24,6 +31,14 @@ render=function(){
     const progress=Math.max(0,Math.min(1,(innerHeight-rect.top)/(innerHeight*.72)));
     const remaining=reduced.matches?0:1-progress;
     tablet.style.transform='translate3d('+remaining*12+'%, '+remaining*150+'px, 0) rotate('+remaining*9+'deg) scale('+(1-remaining*.14)+')';
+    props.forEach((prop,i)=>{
+      const p=reduced.matches?1:Math.max(0,Math.min(1,(progress-i*.08)/(.9-i*.08)));
+      const r=1-p;
+      const x=[-110,65,90][i]*r;
+      const y=[-80,-160,180][i]*r;
+      prop.style.transform='translate3d('+x+'%, '+y+'%, 0) rotate('+([-14,-5,12][i]+r*[18,12,-18][i])+'deg)';
+      prop.style.opacity=String(Math.min(1,p*4));
+    });
   };
   const queue=()=>{if(!frame)frame=requestAnimationFrame(update)};
   addEventListener('scroll',queue,{passive:true});
