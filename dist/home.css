@@ -16,9 +16,9 @@
 .intro-tablet{z-index:2}
 .desk-prop{position:absolute;height:auto;object-fit:contain;pointer-events:none;user-select:none;will-change:transform,opacity;filter:drop-shadow(0 14px 12px #0005)}
 .desk-headphones{left:35%;top:5%;width:23%;z-index:3}
-.desk-headphones{pointer-events:auto;cursor:grab;touch-action:none}
-.desk-headphones.is-dragging{cursor:grabbing}
-.desk-headphones:focus-visible{outline:2px dashed #f7f2f2;outline-offset:6px}
+.desk-prop{pointer-events:auto;cursor:grab;touch-action:none}
+.desk-prop.is-dragging{cursor:grabbing}
+.desk-prop:focus-visible{outline:2px dashed #f7f2f2;outline-offset:6px}
 .desk-keyboard{right:4%;top:4%;width:39%;z-index:3}
 .desk-diary{right:5%;bottom:0;width:24%;z-index:3}
 @media(max-width:600px){.framer-home .original-video{height:76cqw;min-height:300px;padding-top:14cqw;padding-bottom:14cqw}.desk-headphones{left:38%;width:24%}.desk-keyboard{width:45%;top:4%}.desk-diary{width:28%;bottom:0}}
