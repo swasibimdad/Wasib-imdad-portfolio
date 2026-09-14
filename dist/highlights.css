@@ -1,0 +1,11 @@
+.home-highlights{position:relative;z-index:3;background:#080808;color:#f4f4f2;overflow:hidden;font-family:Inter,Arial,sans-serif}
+.highlights-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.highlights-track::-webkit-scrollbar{display:none}
+.highlight-slide{position:relative;isolation:isolate;flex:0 0 100%;scroll-snap-align:start;min-height:760px;height:100svh;display:flex;align-items:center;padding:80px 3.2vw 210px;overflow:hidden}
+.highlight-slide img{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;object-position:center 65%;z-index:-2;filter:brightness(.32) blur(3px);transform:scale(1.025);transition:transform 1000ms ease;pointer-events:none}
+.highlight-slide:after{content:'';position:absolute;inset:0;background:#0003;z-index:-1;pointer-events:none}
+.highlight-slide:hover img{transform:scale(1.055) translate3d(6px,-4px,0)}
+.highlight-copy{max-width:1120px}.highlight-copy>span{font-size:clamp(16px,1.15vw,22px);font-weight:300;color:#ddd}.highlight-copy p{font-size:clamp(24px,1.85vw,38px);font-weight:300;line-height:1.4;letter-spacing:-.035em;margin:28px 0 0}.highlight-copy strong{font-weight:700}
+.highlights-controls{position:absolute;bottom:54px;left:0;right:0;display:grid;justify-items:center;gap:40px;pointer-events:none}.highlights-dots{display:flex;gap:0;pointer-events:auto}.highlights-dots button{border:0;background:transparent;padding:14px 8px;cursor:pointer}.highlights-dots button:after{content:'';display:block;width:10px;height:10px;border-radius:20px;background:#777;transition:width 250ms,background 250ms}.highlights-dots button[aria-current=true]:after{width:30px;background:#f4f4f2}.highlights-scroll{pointer-events:auto;background:none;border:0;color:#ddd;cursor:pointer;font:16px monospace;letter-spacing:.08em;padding:10px 24px}.highlights-scroll span{display:block;font-size:22px;margin-top:12px}.home-highlights button:focus-visible{outline:2px solid white;outline-offset:2px}
+@media(max-width:600px){.highlight-slide{padding:60px 24px 190px;min-height:650px;height:90svh}.highlight-copy p{font-size:26px}.highlights-controls{bottom:28px;gap:20px}}
+@media(prefers-reduced-motion:reduce){.highlight-slide img,.highlights-dots button:after{transition:none}.highlight-slide:hover img{transform:scale(1.025)}}
