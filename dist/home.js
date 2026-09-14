@@ -36,8 +36,10 @@ render=function(){
       Object.assign(prop.style,{left:(rect.left-base.left)+'px',top:(rect.top-base.top)+'px',width:rect.width+'px',transform:'none',opacity:'1',zIndex:'30'});
     };
     const move=(x,y)=>{
-      prop.style.left=Math.max(0,Math.min(canvas.clientWidth-prop.offsetWidth,x))+'px';
-      prop.style.top=Math.max(0,Math.min(canvas.clientHeight-prop.offsetHeight,y))+'px';
+      const upperSection=canvas.previousElementSibling;
+      const upperLimit=upperSection&&upperSection.classList.contains('original-about')?-upperSection.offsetHeight:0;
+      prop.style.left=x+'px';
+      prop.style.top=Math.max(upperLimit,Math.min(canvas.clientHeight-prop.offsetHeight,y))+'px';
     };
     prop.onpointerdown=e=>{
       if(e.button!==0)return;
