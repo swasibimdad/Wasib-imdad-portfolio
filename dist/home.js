@@ -41,10 +41,10 @@ render=function(){
     };
     prop.onpointerdown=e=>{
       if(e.button!==0)return;
-      detach();drag={id:e.pointerId,x:e.pageX,y:e.pageY,left:parseFloat(prop.style.left),top:parseFloat(prop.style.top)};
+      detach();drag={id:e.pointerId,x:e.clientX,y:e.clientY,left:parseFloat(prop.style.left),top:parseFloat(prop.style.top)};
       prop.setPointerCapture(e.pointerId);prop.classList.add('is-dragging');e.preventDefault();
     };
-    prop.onpointermove=e=>{if(drag&&drag.id===e.pointerId)move(drag.left+e.pageX-drag.x,drag.top+e.pageY-drag.y)};
+    prop.onpointermove=e=>{if(drag&&drag.id===e.pointerId)move(drag.left+e.clientX-drag.x,drag.top+e.clientY-drag.y)};
     const release=()=>{drag=null;prop.classList.remove('is-dragging')};
     prop.onpointerup=release;prop.onpointercancel=release;prop.onlostpointercapture=release;
     prop.onkeydown=e=>{

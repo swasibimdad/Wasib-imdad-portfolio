@@ -7,7 +7,7 @@
 .framer-home .original-hero{position:sticky;top:0;z-index:0}
 .framer-home .original-about,.framer-home .original-video,.framer-home .original-footer{position:relative;z-index:1}
 .framer-home .original-about{box-shadow:0 -16px 35px #00000010;border-bottom:0}
-.framer-home .original-video{overflow:visible;perspective:1200px;z-index:2}
+.framer-home .original-video{position:relative;overflow:visible;perspective:1200px;z-index:2}
 .intro-tablet{position:relative;width:100%;padding:clamp(10px,1.65cqw,26px);background:#111214;border:2px solid #a9abad;border-radius:clamp(20px,3.2cqw,48px);box-shadow:0 24px 40px #00000040,inset 0 0 0 3px #292a2c;transform-origin:50% 65%;will-change:transform}
 .intro-tablet:before{content:'';position:absolute;left:50%;top:clamp(4px,.6cqw,9px);width:5px;height:5px;border-radius:50%;background:#252d3b;box-shadow:0 0 0 2px #090a0b}
 .intro-tablet .original-player{border-radius:clamp(7px,1cqw,14px)}
