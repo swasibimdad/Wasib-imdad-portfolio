@@ -6,7 +6,7 @@
     crafeupstairs: '/assets/crafe-hero.png',
     kiapakistan: '/assets/kia/image1.png',
     chakor: '/assets/chakor-hero.png',
-    imarat: '/assets/imarat-hero.png'
+    imarat: '/assets/imarat-grand-bazaar.png'
   };
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
   const preview = document.createElement('div');
