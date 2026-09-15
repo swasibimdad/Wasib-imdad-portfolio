@@ -88,5 +88,5 @@ render=function(){
     reduced.removeEventListener('change',queue);
   };
 };
-home=function(){return homeBeforeHover().replace('<h1>Creative<br>Maker<br>Storyteller</h1>','<h1><span class="hero-word hero-word-creative">Creative</span><br><span class="hero-word hero-word-maker">Maker</span><br><span class="hero-word hero-word-storyteller"><span class="storyteller-stop" aria-hidden="true"></span>Storyteller</span></h1>');};
+home=function(){return homeBeforeHover().replace('<h1>Creative<br>Maker<br>Storyteller</h1>','<h1><span class="hero-word hero-word-creative">Creative</span><br><span class="hero-word hero-word-maker">Maker</span><br><span class="hero-word hero-word-storyteller">Storyteller<span class="storyteller-stop" aria-hidden="true"></span></span></h1>');};
 render();
