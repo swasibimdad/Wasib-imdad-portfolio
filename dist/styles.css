@@ -89,6 +89,11 @@
 .almaymaar-hero,.almaymaar-case,.almaymaar-next{background:#080808;color:#f2f0eb}
 .almaymaar-title{padding:clamp(90px,13vw,200px) var(--pad) clamp(70px,10vw,140px);max-width:1450px}
 .almaymaar-opening-image{display:block;width:100%;height:auto;object-fit:contain}
+.almaymaar-opening{position:relative;isolation:isolate}
+.almaymaar-opening-caption{position:absolute;inset:auto 0 0;padding:clamp(24px,4vw,64px) var(--pad);padding-top:clamp(65px,12vw,190px);background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff;text-shadow:0 2px 8px #000;font-family:Inter,var(--sans)}
+.almaymaar-opening-caption .case-kicker{font-size:clamp(18px,2vw,30px);color:#fff}
+.almaymaar-opening-caption p{font-size:clamp(13px,1.35vw,20px);line-height:1.5;margin:16px 0 0;max-width:1100px;color:#f2f0eb}
+@media(max-width:600px){.almaymaar-opening-caption{padding:48px 20px 16px}.almaymaar-opening-caption p{margin-top:8px;font-size:12px;line-height:1.4}}
 .almaymaar-title>.almaymaar-meta{margin-top:18px;margin-bottom:38px;padding-top:0;border-top:0}
 .almaymaar-title h1{max-width:1120px;margin:24px 0 38px;font-family:Inter,var(--sans);font-size:clamp(3.8rem,8.6vw,9rem);font-weight:300;line-height:.94;letter-spacing:-.06em}
 .almaymaar-title>p{max-width:680px;font-size:clamp(1.2rem,2vw,1.8rem);line-height:1.45;color:#c5c2bc}
