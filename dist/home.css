@@ -20,7 +20,7 @@
 .desk-prop.is-dragging{cursor:grabbing}
 .desk-prop:focus-visible{outline:2px dashed #f7f2f2;outline-offset:6px}
 .desk-keyboard{right:4%;top:4%;width:39%;z-index:3}
-.movable-note{position:absolute;left:54%;bottom:calc(96% + 1cqw);width:7cqw;height:8cqw;overflow:hidden;pointer-events:none;z-index:3}.movable-note img{position:absolute;width:210%;max-width:none;height:auto;left:-53%;top:-90%;object-fit:contain}
+.movable-note{position:absolute;left:54%;bottom:calc(92% + 1cqw);width:7cqw;height:8cqw;overflow:hidden;pointer-events:none;z-index:3;opacity:0;transform:translateY(10px);transition:opacity .8s ease,transform .8s ease}.movable-note.is-visible{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){.movable-note{transition:none}}.movable-note img{position:absolute;width:210%;max-width:none;height:auto;left:-53%;top:-90%;object-fit:contain}
 .desk-diary{right:-14%;bottom:0;width:24%;z-index:3}
 @media(max-width:600px){.framer-home .original-video{height:76cqw;min-height:300px;padding-top:14cqw;padding-bottom:14cqw}.desk-headphones{left:38%;width:24%}.desk-keyboard{width:45%;top:4%}.desk-diary{width:28%;bottom:0;right:-17%}}
 @media(prefers-reduced-motion:reduce){.desk-prop{will-change:auto}}
