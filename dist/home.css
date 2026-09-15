@@ -32,5 +32,5 @@
 
 .is-original-home>.site-header{display:flex;position:fixed;top:0;left:0;right:0;z-index:100}
 
-.is-original-home>.site-header{height:140px;background:#eeeeee}.is-original-home>.site-header .wordmark{font-family:Inter,Arial,sans-serif;font-weight:600;color:#666}
-@media(max-width:800px){.is-original-home>.site-header{height:90px}}
+.is-original-home>.site-header{height:110px;background:#eeeeee}.is-original-home>.site-header .wordmark{font-family:Inter,Arial,sans-serif;font-weight:600;color:#666}
+@media(max-width:800px){.is-original-home>.site-header{height:72px}}
