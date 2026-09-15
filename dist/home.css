@@ -4,7 +4,7 @@
 .original-hero .hero-word-maker:hover{color:#E65B4F}
 .original-hero .hero-word-storyteller:hover{color:#F2B705}
 .framer-home{isolation:isolate;position:relative}
-.framer-home .original-hero{position:sticky;top:0;z-index:0}
+.framer-home .original-hero{position:sticky;top:0;z-index:0;margin-top:76px}
 .framer-home .original-about,.framer-home .original-video,.framer-home .original-footer{position:relative;z-index:1}
 .framer-home .original-about{box-shadow:none;border-bottom:0}
 .framer-home .original-video{position:relative;overflow:visible;perspective:1200px;z-index:2}
@@ -28,4 +28,4 @@
 @media(max-width:600px){.original-intro{font-size:12px}.original-about{height:auto;min-height:360px;padding:30px 20px}.original-about-copy{position:relative;left:auto;top:auto}.original-label{font-size:14px;margin-bottom:24px}.original-description{font-size:14px;max-width:100%;margin-bottom:22px}.original-description br{display:none}.original-button{font-size:14px;padding:8px 16px;border-radius:3px}.original-polaroids{position:relative;top:auto;right:auto;width:42%;height:auto;margin:18px 0 0 auto}.original-video{height:auto;min-height:220px;padding:20px 16px}.original-footer{min-height:180px;height:auto;font-size:12px}.original-footer>div:first-child{left:7%;top:55px}.original-footer>div:last-child{left:56%;top:75px}.youtube-play{width:44px;height:32px;font-size:16px}}
 
 .home-topbar{position:fixed;top:0;left:0;right:0;height:76px;padding:0 3.2vw;display:flex;align-items:center;justify-content:space-between;background:#f3f1ef;color:#565656;z-index:100;font-size:clamp(16px,1.35cqw,24px);font-weight:500}.home-topbar-menu{display:grid;gap:5px;width:26px}.home-topbar-menu i{display:block;height:2px;background:#222;width:26px}
-@media(max-width:600px){.home-topbar{height:58px;padding:0 20px;font-size:16px}.home-topbar-menu{width:22px}.home-topbar-menu i{width:22px}}
+@media(max-width:600px){.framer-home .original-hero{margin-top:58px}.home-topbar{height:58px;padding:0 20px;font-size:16px}.home-topbar-menu{width:22px}.home-topbar-menu i{width:22px}}
