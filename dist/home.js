@@ -20,6 +20,7 @@ render=function(){
   note.className='movable-note';
   note.innerHTML='<img src="/assets/movable-note.png" alt="We’re all movable — drag the headphones, keyboard or diary" draggable="false">';
   section.append(note);
+  if('IntersectionObserver' in window){const noteObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){note.classList.add('is-visible');noteObserver.disconnect()}},{threshold:.2});noteObserver.observe(section)}else note.classList.add('is-visible');
   const props=['headphones','keyboard','diary'].map(name=>{
     const img=document.createElement('img');
     img.className='desk-prop desk-'+name;
