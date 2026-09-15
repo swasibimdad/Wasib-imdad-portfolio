@@ -16,6 +16,10 @@ render=function(){
   tablet.className='intro-tablet';
   player.before(tablet);
   tablet.append(player);
+  const note=document.createElement('div');
+  note.className='movable-note';
+  note.innerHTML='<img src="/assets/movable-note.png" alt="We’re all movable — drag the headphones, keyboard or diary" draggable="false">';
+  section.append(note);
   const props=['headphones','keyboard','diary'].map(name=>{
     const img=document.createElement('img');
     img.className='desk-prop desk-'+name;
