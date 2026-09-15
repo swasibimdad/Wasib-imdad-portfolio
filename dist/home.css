@@ -2,7 +2,7 @@
 .original-hero .hero-word{transition:color 180ms ease;}
 .original-hero .hero-word-creative:hover{color:#A5A886}
 .original-hero .hero-word-maker:hover{color:#E65B4F}
-.original-hero .hero-word-storyteller:hover{color:#F2B705}.storyteller-stop{display:inline-block;width:.2em;height:.2em;margin:0 0 .02em .14em;background:currentColor;vertical-align:baseline;transform:translateY(.12em)}
+.original-hero .hero-word-storyteller:hover{color:#F2B705}.hero-word-storyteller{white-space:nowrap}.storyteller-stop{display:inline-block;width:.2em;height:.2em;margin:0 0 0 .08em;background:currentColor;vertical-align:baseline}
 .framer-home{isolation:isolate;position:relative}
 .framer-home .original-hero{position:sticky;top:0;z-index:0;margin-top:0}
 .framer-home .original-about,.framer-home .original-video,.framer-home .original-footer{position:relative;z-index:1}
