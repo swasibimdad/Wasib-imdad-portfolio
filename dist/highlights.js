@@ -19,7 +19,7 @@
     const behavior=()=>matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth';
     buttons.forEach((button,i)=>button.onclick=()=>track.scrollTo({left:i*track.clientWidth,behavior:behavior()}));
     track.addEventListener('scroll',()=>{const active=Math.round(track.scrollLeft/track.clientWidth);buttons.forEach((button,i)=>button.setAttribute('aria-current',String(i===active)))},{passive:true});
-    let autoIndex=0;const autoTimer=setInterval(()=>{autoIndex=(Math.round(track.scrollLeft/track.clientWidth)+1)%statements.length;track.scrollTo({left:autoIndex*track.clientWidth,behavior:behavior()})},2000);
+    let autoIndex=0;const autoTimer=setInterval(()=>{autoIndex=(Math.round(track.scrollLeft/track.clientWidth)+1)%statements.length;track.scrollTo({left:autoIndex*track.clientWidth,behavior:behavior()})},5000);
     section.querySelector('.highlights-scroll').onclick=()=>footer.scrollIntoView({behavior:behavior(),block:'start'});
     track.tabIndex=0;track.setAttribute('aria-label','Highlights; swipe or use left and right arrow keys');
     track.onkeydown=e=>{if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;e.preventDefault();track.scrollBy({left:(e.key==='ArrowRight'?1:-1)*track.clientWidth,behavior:behavior()})};
