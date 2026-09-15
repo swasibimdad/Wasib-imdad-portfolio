@@ -35,3 +35,18 @@
 
 .is-original-home>.site-header{height:110px;background:#eeeeee}.is-original-home>.site-header .wordmark{font-family:Inter,Arial,sans-serif;font-weight:600;color:#666}
 @media(max-width:800px){.is-original-home>.site-header{height:72px}}
+
+/* One shared header height keeps every route clear of the fixed bar. */
+:root{--header-height:80px}
+body>.site-header,body.is-original-home>.site-header,body.is-work-page>.site-header{height:var(--header-height);padding:0 3.2vw}
+body>.site-header .wordmark,body.is-work-page>.site-header .wordmark,body.is-original-home>.site-header .wordmark{font-size:18px;font-weight:400;letter-spacing:-.025em;color:#666}
+body>.site-header .menu{width:44px;height:44px}
+body>.site-header .menu span{width:22px;height:2px;margin:5px auto;background:#333}
+body>.site-header .menu[aria-expanded=true] span:first-child{transform:translateY(7px) rotate(45deg)}
+body>.site-header .menu[aria-expanded=true] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+body.is-work-page{padding-top:0}
+body>.site-header+#app{padding-top:var(--header-height)}
+body>.site-header nav{top:var(--header-height);min-height:min(560px,calc(100dvh - var(--header-height)));max-height:calc(100dvh - var(--header-height));overflow-y:auto}
+html{scroll-padding-top:var(--header-height)}
+.framer-home .original-hero{top:var(--header-height)}
+@media(max-width:800px){:root{--header-height:64px}body>.site-header,body.is-original-home>.site-header,body.is-work-page>.site-header{padding:0 24px}body>.site-header .wordmark,body.is-work-page>.site-header .wordmark,body.is-original-home>.site-header .wordmark{font-size:17px}}
