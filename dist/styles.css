@@ -44,6 +44,7 @@
 .harsukh-case{background:#080808;color:#f2f0eb;--line:#ffffff24;font-family:Inter,var(--sans)}
 .harsukh-hero{background:#080808;border:0}
 .harsukh-hero .harsukh-film{max-width:1200px;margin:0 auto;padding:clamp(40px,7vw,100px) var(--pad);background:#080808}
+.harsukh-film-inline{max-width:1200px;margin:0 auto;padding:clamp(40px,7vw,100px) var(--pad);background:#080808}
 .harsukh-case .harsukh-copy h2,.harsukh-case .system-section h2,.harsukh-case .proof-result h2,.harsukh-case .harsukh-closing h2,.harsukh-case .timeline-grid h3,.harsukh-case .metric strong{font-family:Inter,var(--sans);font-weight:300;letter-spacing:-.055em}
 .harsukh-case .harsukh-copy p{color:#c7c4be}
 .harsukh-case .case-kicker,.harsukh-case figcaption,.harsukh-case .people-proof>p{color:#aaa7a1}
