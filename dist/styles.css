@@ -88,6 +88,8 @@
 /* Almaymaar case study — black editorial canvas with evidence at full scale. */
 .almaymaar-hero,.almaymaar-case,.almaymaar-next{background:#080808;color:#f2f0eb}
 .almaymaar-title{padding:clamp(90px,13vw,200px) var(--pad) clamp(70px,10vw,140px);max-width:1450px}
+.almaymaar-opening-image{display:block;width:100%;height:auto;object-fit:contain}
+.almaymaar-title>.almaymaar-meta{margin-top:18px;margin-bottom:38px;padding-top:0;border-top:0}
 .almaymaar-title h1{max-width:1120px;margin:24px 0 38px;font-family:Inter,var(--sans);font-size:clamp(3.8rem,8.6vw,9rem);font-weight:300;line-height:.94;letter-spacing:-.06em}
 .almaymaar-title>p{max-width:680px;font-size:clamp(1.2rem,2vw,1.8rem);line-height:1.45;color:#c5c2bc}
 .almaymaar-meta{display:flex;flex-wrap:wrap;gap:12px 48px;margin-top:60px;padding-top:22px;border-top:1px solid #ffffff2e;font-size:.76rem;color:#aaa7a1}
