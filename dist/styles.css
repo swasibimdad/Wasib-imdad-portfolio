@@ -161,3 +161,6 @@
 .property-theme{margin:0 var(--pad) clamp(65px,9vw,125px)}.property-theme img{display:block;width:100%;height:auto;object-fit:contain}
 
 .property-video-cover{position:relative;display:block;width:100%;padding:0;border:0;background:#111;cursor:pointer}.property-video-cover img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}.property-video-cover span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:#000b;color:#fff;font-size:28px}
+
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;height:80px}.site-header .wordmark{font-family:Inter,Arial,sans-serif;font-size:1.25rem;font-weight:500}.site-header nav a{font-family:Inter,Arial,sans-serif;font-size:.9rem}.site-header+main{padding-top:80px}.is-original-home .site-header{display:flex}.is-work-page{padding-top:31px}.is-work-page .site-header+main{padding-top:0}
+@media(max-width:800px){.site-header{height:68px}.site-header+main{padding-top:68px}.is-work-page{padding-top:31px}.is-work-page .site-header+main{padding-top:0}}
