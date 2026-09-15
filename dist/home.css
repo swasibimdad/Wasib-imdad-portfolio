@@ -2,7 +2,7 @@
 .original-hero .hero-word{transition:color 180ms ease;}
 .original-hero .hero-word-creative:hover{color:#A5A886}
 .original-hero .hero-word-maker:hover{color:#E65B4F}
-.original-hero .hero-word-storyteller:hover{color:#F2B705}
+.original-hero .hero-word-storyteller:hover{color:#F2B705}.storyteller-stop{display:inline-block;width:.13em;height:.13em;margin:0 .16em .14em 0;background:currentColor;vertical-align:baseline}
 .framer-home{isolation:isolate;position:relative}
 .framer-home .original-hero{position:sticky;top:0;z-index:0;margin-top:0}
 .framer-home .original-about,.framer-home .original-video,.framer-home .original-footer{position:relative;z-index:1}
