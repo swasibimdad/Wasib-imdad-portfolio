@@ -194,7 +194,7 @@
 .site-header nav{display:none;position:fixed;top:110px;left:0;right:0;min-height:min(560px,calc(100vh - 110px));padding:58px 3.2vw 82px;background:#eeeeee;color:#666;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;border:0;z-index:99}
 .site-header nav.open{display:flex}
 .site-header nav a{font-size:clamp(42px,4vw,68px);font-weight:600;line-height:1.08;letter-spacing:-.045em}
-.site-header nav a:hover{text-decoration:none;color:#222}.site-header nav a:nth-child(2):hover{color:#f2b705}.site-header nav a:nth-child(3):hover{color:#a5a886}.site-header nav a:nth-child(3){color:#a5a886}
+.site-header nav a:hover{text-decoration:none;color:#222}.site-header nav a:nth-child(2):hover{color:#f2b705}.site-header nav a:nth-child(3){color:#666}.site-header nav a:nth-child(3):hover{color:#a5a886}
 .menu{display:block;position:relative;z-index:101;cursor:pointer;padding:0;border:0;background:transparent}
 .menu span{transition:transform .24s ease,opacity .18s ease}
 .menu[aria-expanded=true] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
