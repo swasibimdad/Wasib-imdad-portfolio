@@ -215,6 +215,7 @@
 .about-highlight,.about-question{color:inherit;font-weight:700}
 .about-question{font-size:1.3em;line-height:1.2;letter-spacing:-.025em}
 .about-signoff{padding-top:1em;padding-bottom:2em}
+.about-signoff span{font-size:.58em;line-height:1.35}
 .about-portrait{float:right;position:relative;width:48%;margin:0 calc(-1 * var(--pad) - 2vw) 0 0;shape-outside:polygon(29% 0,100% 0,100% 100%,0 100%,0 72%,23% 64%,24% 25%);shape-margin:16px;pointer-events:none}
 .about-portrait img{display:block;width:100%;height:auto;max-width:none;filter:none;opacity:1}
 @media(max-width:700px){.about-page{padding:40px 24px 0}.about-writing h1{font-size:44px;margin-bottom:30px}.about-page .about-writing{font-size:17px}.about-portrait{width:54%;margin-right:-36px;shape-margin:12px}.about-question{font-size:1.15em}}
