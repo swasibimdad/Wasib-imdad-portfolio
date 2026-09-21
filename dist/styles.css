@@ -220,3 +220,4 @@
 .about-portrait img{display:block;width:100%;height:auto;max-width:none;filter:none;opacity:1}
 @media(max-width:700px){.about-page{padding:40px 24px 0}.about-writing h1{font-size:44px;margin-bottom:30px}.about-page .about-writing{font-size:17px}.about-portrait{width:54%;margin-right:-36px;shape-margin:12px}.about-question{font-size:1.15em}}
 @media(max-width:450px){.about-portrait{width:66%;shape-outside:polygon(35% 0,100% 0,100% 100%,0 100%,0 72%,27% 55%,27% 25%)} }
+.site-header .wordmark{transition:color .2s ease}.site-header .wordmark:hover{color:#f24c3d}
