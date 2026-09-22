@@ -221,3 +221,138 @@
 @media(max-width:700px){.about-page{padding:40px 24px 0}.about-writing h1{font-size:44px;margin-bottom:30px}.about-page .about-writing{font-size:17px}.about-portrait{width:54%;margin-right:-36px;shape-margin:12px}.about-question{font-size:1.15em}}
 @media(max-width:450px){.about-portrait{width:66%;shape-outside:polygon(35% 0,100% 0,100% 100%,0 100%,0 72%,27% 55%,27% 25%)} }
 .site-header .wordmark{transition:color .2s ease}.site-header .wordmark:hover{color:#f24c3d}
+
+/* Responsive compositions. Desktop remains the source of truth above 1100px. */
+@media (min-width:701px) and (max-width:1100px){
+  :root{--pad:clamp(34px,5vw,52px)}
+  .project-hero{grid-template-columns:.9fr 1.1fr;min-height:clamp(600px,72vh,760px)}
+  .project-title{min-height:0;padding:var(--pad)}
+  .project-title h1{font-size:clamp(4.4rem,8.8vw,6.8rem)}
+  .project-image{min-height:clamp(600px,72vh,760px)}
+  .case-block{grid-template-columns:.72fr 1.45fr;gap:clamp(34px,6vw,72px)}
+  footer{grid-template-columns:1fr 1fr;gap:40px}
+
+  .portfolio-intro{padding:58px var(--pad) 72px}
+  .portfolio-intro h1{font-size:clamp(4.8rem,9vw,6.6rem)}
+  .portfolio-row{min-height:clamp(210px,26vw,270px);padding:42px var(--pad);padding-right:clamp(220px,28vw,300px)}
+  .portfolio-row h2{font-size:clamp(2.2rem,4.7vw,3.3rem)}
+  .portfolio-meta{right:var(--pad)}
+
+  .harsukh-hero .project-title{min-height:clamp(610px,76vh,760px);padding:64px var(--pad)}
+  .harsukh-copy{grid-template-columns:minmax(135px,.5fr) minmax(0,1.35fr);column-gap:clamp(42px,7vw,80px)}
+  .harsukh-copy .case-kicker{grid-row:1/4;margin:0}
+  .harsukh-copy p{grid-column:2}
+  .people-proof{grid-template-columns:1fr 1fr}
+  .people-proof figure{height:min(68vw,700px)}
+  .people-proof>p{grid-column:1/-1}
+  .timeline-grid{grid-template-columns:repeat(3,1fr)}
+  .timeline-grid>div,.timeline-grid>div+div{padding:24px 20px;border-right:1px solid var(--line);border-bottom:0}
+  .timeline-grid>div:first-child{padding-left:0}
+  .timeline-grid>div:last-child{border-right:0;padding-right:0}
+  .proof-result{grid-template-columns:1.3fr .7fr .7fr}
+
+  .almaymaar-reel{height:auto;aspect-ratio:16/10;margin:0 var(--pad)}
+  .almaymaar-section-head,.almaymaar-copy{grid-template-columns:.42fr 1.58fr;gap:42px}
+  .almaymaar-shift{grid-template-columns:.9fr 1.1fr;gap:45px}
+  .almaymaar-shift figure{order:initial}
+  .system-questions,.grid-legend{grid-template-columns:repeat(3,1fr)}
+  .system-questions>div,.system-questions>div+div{min-height:260px;padding:24px 22px;border-right:1px solid #0005;border-bottom:0}
+  .system-questions>div:first-child{padding-left:0}
+  .grid-legend>div,.grid-legend>div+div{padding:23px 18px;border-right:1px solid #ffffff32;border-bottom:0}
+  .grid-legend>div:first-child{padding-left:0}
+  .almaymaar-closing{grid-template-columns:.85fr 1.15fr;gap:45px;min-height:auto}
+  .almaymaar-closing img{order:initial}
+}
+
+@media (max-width:700px){
+  :root{--pad:24px}
+  body{font-size:15px;overflow-x:hidden}
+  .site-header nav{padding-left:24px;padding-right:24px;gap:8px}
+  .site-header nav a{min-height:48px;display:flex;align-items:center}
+  .menu{min-width:48px;min-height:48px}
+  .project-hero{display:flex;min-height:0;flex-direction:column}
+  .project-title{min-height:clamp(440px,115vw,520px);padding:44px 24px}
+  .project-title h1{font-size:clamp(3.9rem,18vw,5.2rem)}
+  .project-image{min-height:clamp(360px,96vw,470px)}
+  .case-body{padding:74px 24px}
+  .case-block{padding:38px 0;gap:20px}
+  .gallery{gap:12px;margin-bottom:72px}
+  .next{gap:28px;padding:36px 24px;font-size:clamp(1.45rem,7vw,2.1rem)}
+  .next span:last-child{text-align:right}
+  footer{padding:64px 24px 28px;gap:48px}
+  footer small{margin-top:30px}
+
+  .portfolio-intro{padding:54px 24px 62px}
+  .portfolio-intro h1{font-size:clamp(3.6rem,17vw,4.5rem);line-height:.95}
+  .portfolio-row{min-height:230px;padding:38px 24px;padding-right:24px}
+  .portfolio-row h2{font-size:clamp(1.9rem,9vw,2.45rem);line-height:1.08}
+  .portfolio-meta{margin-bottom:22px}
+
+  .harsukh-hero .project-title{min-height:clamp(560px,145vw,650px);padding:42px 24px;background-position:center}
+  .harsukh-hero .project-title:after{background:linear-gradient(180deg,rgba(4,5,6,.24),rgba(4,5,6,.86) 82%)}
+  .harsukh-copy{padding:84px 24px}
+  .harsukh-copy h2{font-size:clamp(2.8rem,13vw,4rem)}
+  .before-figure{width:82%}
+  .after-figure{width:92%;margin-left:auto}
+  .people-proof{gap:14px}
+  .people-proof figure{height:118vw}
+  .system-section>h2{font-size:clamp(3rem,14vw,4.7rem)}
+  .timeline-grid h3{font-size:clamp(2.2rem,10vw,3rem)}
+  .proof-result h2{font-size:clamp(3rem,13vw,4.4rem)}
+  .harsukh-closing,.harsukh-closing>div{min-height:76svh}
+  .harsukh-closing h2{font-size:clamp(3.2rem,14vw,4.7rem)}
+
+  .almaymaar-opening{min-height:510px;overflow:hidden}
+  .almaymaar-opening-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .almaymaar-opening-caption{padding:120px 24px 28px;background:linear-gradient(transparent 10%,rgba(0,0,0,.92))}
+  .almaymaar-opening-caption .case-kicker{font-size:20px}
+  .almaymaar-opening-caption p{font-size:12px;line-height:1.45}
+  .almaymaar-title{padding:82px 24px 70px}
+  .almaymaar-title h1{font-size:clamp(3.4rem,16vw,4.4rem);margin-bottom:28px}
+  .almaymaar-title>p{font-size:1.12rem}
+  .almaymaar-meta{gap:10px 24px;margin-top:42px}
+  .almaymaar-reel{height:auto;aspect-ratio:4/5;margin:0 16px}
+  .almaymaar-reel img{object-position:center}
+  .almaymaar-intro,.almaymaar-before,.almaymaar-grid-proof,.almaymaar-copy,.almaymaar-system,.almaymaar-chapter,.almaymaar-shift,.almaymaar-result,.almaymaar-closing{padding-left:24px;padding-right:24px}
+  .almaymaar-intro h2{font-size:clamp(3.5rem,16vw,4.6rem)}
+  .almaymaar-section-head h2,.chapter-copy h2,.almaymaar-shift h2,.almaymaar-closing h2{font-size:clamp(3rem,13.5vw,4.2rem)}
+  .before-pair{grid-template-columns:1.05fr .95fr;gap:7px}
+  .triptych{grid-template-columns:repeat(3,1fr);gap:5px}
+  .system-questions>div,.system-questions>div+div{min-height:190px}
+  .chapter-copy blockquote{font-size:clamp(1.8rem,8vw,2.5rem);padding-left:16px}
+  .almaymaar-closing{min-height:auto}
+  .almaymaar-closing img{width:88%;margin:0 0 44px auto}
+
+  .dt-copy,.crafe-copy,.crafe-watch{padding-left:24px;padding-right:24px}
+  .dt-images{grid-template-columns:1fr 1fr;gap:8px;padding:0 16px}
+  .dt-images img:nth-child(3):last-child{grid-column:1/-1;width:70%;justify-self:center}
+  .dt-copy h2,.crafe-copy h2,.crafe-watch h2{font-size:clamp(2.55rem,12vw,3.75rem)}
+  .dt-process{font-size:clamp(1.2rem,6vw,1.75rem)}
+  .dt-broadcast{width:88%}
+  .crafe-title{padding-left:24px;padding-right:24px}
+  .crafe-grid{gap:8px;padding:0 16px}
+  .crafe-watch iframe{width:84%}
+  .kia-pair{grid-template-columns:1fr 1fr;gap:8px;padding-left:16px;padding-right:16px}
+  .kia-proof{width:90%}
+  .property-film{padding-left:16px;padding-right:16px}
+  .property-short{width:78%;padding-left:0;padding-right:0}
+}
+
+@media (max-width:450px){
+  .about-page{padding:42px 24px 0}
+  .about-writing h1{font-size:clamp(42px,12vw,50px);margin-bottom:30px}
+  .about-page .about-writing{font-size:15.5px;line-height:1.58}
+  .about-writing p{margin-bottom:1.35em}
+  .about-portrait{width:70%;margin-right:-42px;shape-margin:9px}
+  .about-signoff span{font-size:.7em}
+  .property-video-cover span,.harsukh-video-cover span{width:58px;height:44px;font-size:21px}
+}
+
+@media (hover:none),(pointer:coarse){
+  .portfolio-row:hover{background:#3f3b3c}
+  .portfolio-row:active{background:#E65B4F}
+  .portfolio-row:hover .portfolio-meta{color:#ef705f}
+  .portfolio-row:active .portfolio-meta{color:#181313}
+  .almaymaar-reel img,.harsukh-hero .project-title:before{transition:none}
+  .almaymaar-reel:hover img{transform:scale(1.06);opacity:.7}
+}
