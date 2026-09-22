@@ -84,7 +84,7 @@ html{scroll-padding-top:var(--header-height)}
 @media (max-width:600px){
   .framer-home{overflow-x:clip}
   .original-hero{height:clamp(490px,128cqw,560px)}
-  .original-hero>img{object-position:59% center}
+  .original-hero>img{object-position:27% center}
   .original-intro{left:24px;top:34px;font-size:13px;line-height:1.25}
   .original-hero h1{left:24px;top:148px;font-size:clamp(50px,13.4cqw,58px);line-height:1.12}
   .storyteller-stop{width:.18em;height:.18em}
@@ -129,3 +129,8 @@ html{scroll-padding-top:var(--header-height)}
 }
 
 body.menu-open{overflow:hidden}
+
+/* Seal fractional-pixel seams over the sticky hero on smaller screens. */
+@media (max-width:1100px){
+  .framer-home .home-highlights{margin-top:-2px}
+}
